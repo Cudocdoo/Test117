@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>간단한 계산기</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- 계산기 전체 틀 -->
+  <div class="calculator">
+    <!-- 화면: 위에는 계산식, 아래에는 현재 숫자 -->
+    <div class="display">
+      <div class="expression" id="expression"></div>
+      <div class="current" id="current">0</div>
+    </div>
+
+    <!-- 버튼들: data-* 속성으로 "이 버튼이 무슨 역할인지" 표시 -->
+    <div class="buttons">
+      <button class="fn" data-action="clear">AC</button>
+      <button class="fn" data-action="delete">⌫</button>
+      <button class="fn" data-action="percent">%</button>
+      <button class="op" data-operator="/">÷</button>
+
+      <button data-number="7">7</button>
+      <button data-number="8">8</button>
+      <button data-number="9">9</button>
+      <button class="op" data-operator="*">×</button>
+
+      <button data-number="4">4</button>
+      <button data-number="5">5</button>
+      <button data-number="6">6</button>
+      <button class="op" data-operator="-">−</button>
+
+      <button data-number="1">1</button>
+      <button data-number="2">2</button>
+      <button data-number="3">3</button>
+      <button class="op" data-operator="+">+</button>
+
+      <button class="zero" data-number="0">0</button>
+      <button data-action="dot">.</button>
+      <button class="eq" data-action="equals">=</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

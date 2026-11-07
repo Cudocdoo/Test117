@@ -1,0 +1,88 @@
+/* 전체 페이지: 계산기를 화면 가운데에 배치 */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #1e1e2e;
+  font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
+}
+
+/* 계산기 본체 */
+.calculator {
+  width: 320px;
+  max-width: calc(100vw - 32px);
+  padding: 20px;
+  border-radius: 24px;
+  background: #2b2b3c;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* 숫자가 보이는 화면 */
+.display {
+  padding: 16px 8px 20px;
+  text-align: right;
+  color: #fff;
+  overflow: hidden;
+}
+
+.expression {
+  min-height: 24px;
+  font-size: 18px;
+  color: #9a9ab0;
+}
+
+.current {
+  font-size: 48px;
+  font-weight: 300;
+  word-break: break-all;
+}
+
+/* 버튼 배치: 4칸짜리 격자(grid) */
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+}
+
+button {
+  height: 64px;
+  border: none;
+  border-radius: 16px;
+  font-size: 24px;
+  color: #fff;
+  background: #3a3a50;
+  cursor: pointer;
+  transition: filter 0.1s, transform 0.05s;
+}
+
+button:hover {
+  filter: brightness(1.2);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+/* 버튼 종류별 색상 */
+.fn {
+  background: #55556e;
+}
+
+.op {
+  background: #ff9f0a;
+}
+
+.eq {
+  background: #34c759;
+}
+
+/* 0 버튼은 두 칸 차지 */
+.zero {
+  grid-column: span 2;
+}
