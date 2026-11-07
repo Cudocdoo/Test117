@@ -9,7 +9,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  background: #1e1e2e;
+  background: #fff8d6;
   font-family: system-ui, -apple-system, "Segoe UI", sans-serif;
 }
 
@@ -19,22 +19,22 @@ body {
   max-width: calc(100vw - 32px);
   padding: 20px;
   border-radius: 24px;
-  background: #2b2b3c;
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  background: #ffe066;
+  box-shadow: 0 20px 40px rgba(180, 130, 0, 0.35);
 }
 
 /* 숫자가 보이는 화면 */
 .display {
   padding: 16px 8px 20px;
   text-align: right;
-  color: #fff;
+  color: #3d2c00;
   overflow: hidden;
 }
 
 .expression {
   min-height: 24px;
   font-size: 18px;
-  color: #9a9ab0;
+  color: #8a6d1f;
 }
 
 .current {
@@ -55,14 +55,14 @@ button {
   border: none;
   border-radius: 16px;
   font-size: 24px;
-  color: #fff;
-  background: #3a3a50;
+  color: #3d2c00;
+  background: #fff3b0;
   cursor: pointer;
   transition: filter 0.1s, transform 0.05s;
 }
 
 button:hover {
-  filter: brightness(1.2);
+  filter: brightness(0.95);
 }
 
 button:active {
@@ -71,15 +71,17 @@ button:active {
 
 /* 버튼 종류별 색상 */
 .fn {
-  background: #55556e;
+  background: #ffd43b;
 }
 
 .op {
-  background: #ff9f0a;
+  color: #fff;
+  background: #f59f00;
 }
 
 .eq {
-  background: #34c759;
+  color: #fff;
+  background: #e67700;
 }
 
 /* 0 버튼은 두 칸 차지 */
